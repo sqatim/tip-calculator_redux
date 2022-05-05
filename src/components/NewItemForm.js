@@ -1,8 +1,8 @@
-import { Box, Button, Input, Label } from '@twilio-paste/core';
-import { useState } from 'react';
+import { Box, Button, Input, Label } from "@twilio-paste/core";
+import { useState } from "react";
 
 export const NewItemForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
 
   const isValid = () => {
@@ -14,11 +14,11 @@ export const NewItemForm = ({ onSubmit }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (typeof onSubmit === 'function') {
+    if (typeof onSubmit === "function") {
       onSubmit(name, price);
     }
 
-    setName('');
+    setName("");
     setPrice(0);
   };
 
